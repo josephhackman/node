@@ -8,8 +8,8 @@ const Countdown = require('../common/countdown');
 // GETs following a 204 response with a content-encoding header failed.
 // Responses without bodies and without content-length or encoding caused
 // the socket to be closed.
-const codes = [304, 204, 200, 200];
-const methods = ['HEAD', 'HEAD', 'GET'];
+const codes = [204, 200, 200, 304, 200];
+const methods = ['HEAD', 'HEAD', 'GET', 'HEAD', 'GET'];
 
 const sockets = [];
 const agent = new http.Agent();
